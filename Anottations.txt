@@ -1,0 +1,12 @@
+# Subir Container Docker de acordo com o compose/yml, selecionando o service
+docker compose up -d go_db
+
+# Buildar a imagem
+docker build -t go-api .
+
+#TAGEAR Imagem antes de subir pro HUB
+docker tag COD_IAMGEM matheusteixeiras/portfolio:NOME_DA_TAG
+
+#Subir para HUB
+docker push matheusteixeiras/portfolio:NOME_DA_TAG
+
